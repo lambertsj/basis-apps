@@ -7,7 +7,7 @@
   "apps": [
     {
       "id": "kilometerregistratie",
-      "name": "Kilometerregistratie NL",
+      "name": "Kilometerregistratie",
       "tagline": "Ritten bijhouden zonder abonnement.",
       "description": "Registreer je ritten voor de belasting of je werkgever. Je gegevens blijven op je eigen toestel.",
       "category": "administratie",
