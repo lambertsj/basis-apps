@@ -7,13 +7,13 @@
   "apps": [
     {
       "id": "kilometerregistratie",
-      "name": "Kilometerregistratie",
+      "name": "Kilometerregistratie NL",
       "tagline": "Ritten bijhouden zonder abonnement.",
       "description": "Registreer je ritten voor de belasting of je werkgever. Je gegevens blijven op je eigen toestel.",
       "category": "administratie",
       "platforms": ["iOS"],
-      "url": null,
-      "source": null,
+      "url": "https://apps.apple.com/nl/app/kilometerregistratie-nl/id6791920895",
+      "source": "https://github.com/lambertsj/Kilometerregistratie",
       "added": "2026-09-30"
     },
     {
