@@ -93,5 +93,4 @@ Alleen voor apps die in `apps.json` staan:
 
 ## Nog in te vullen
 
-- De GitHub-URL `https://github.com/basisapps/basisapps` in `index.html` is een placeholder.
 - De apps in `apps.json` hebben nog `url: null`. Vul de definitieve links in zodra ze bestaan.
