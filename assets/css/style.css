@@ -1,0 +1,29 @@
+/* Aanvullingen op Tailwind (CDN). Houd dit bestand klein. */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid #16a34a;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* De badge heeft een witte achtergrond en blijft ook in dark mode leesbaar. */
+.badge-preview {
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+code,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
