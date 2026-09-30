@@ -23,8 +23,9 @@
       "description": "Noteer per woning wat je zag, wat je vond en wat je nog wilt weten, zodat je later eerlijk kunt vergelijken.",
       "category": "wonen",
       "platforms": ["iOS"],
-      "url": null,
-      "source": null,
+      "url": "https://apps.apple.com/nl/app/bezichtiging-huis-checklist/id6774289434",
+      "source": "https://github.com/lambertsj/bezichtiging-apps",
+      "website": "https://bezichtiging.app",
       "added": "2026-09-30"
     }
   ]

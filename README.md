@@ -58,12 +58,13 @@ Voeg een object toe aan `apps`:
   "platforms": ["iOS", "Android"],
   "url": "https://apps.apple.com/...",
   "source": "https://github.com/...",
+  "website": "https://...",
   "added": "2026-09-30"
 }
 ```
 
 - `category` moet een `id` zijn uit `categories` bovenaan het bestand.
-- `url` en `source` mogen `null` zijn. Alleen `http(s)`-links worden getoond.
+- `url`, `source` en `website` mogen `null` of weggelaten zijn. Alleen `http(s)`-links worden getoond.
 - Alle tekst wordt als platte tekst weergegeven. HTML wordt niet uitgevoerd.
 
 ## De badge gebruiken

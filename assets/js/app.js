@@ -84,6 +84,7 @@
     var actions = el("div", "mt-4 flex flex-wrap gap-2");
     var url = safeUrl(app.url);
     var source = safeUrl(app.source);
+    var website = safeUrl(app.website);
     if (url) {
       actions.appendChild(linkButton("Bekijk de app", url, true));
     } else {
@@ -95,6 +96,7 @@
         )
       );
     }
+    if (website) actions.appendChild(linkButton("Website", website, false));
     if (source) actions.appendChild(linkButton("Broncode", source, false));
     article.appendChild(actions);
 
