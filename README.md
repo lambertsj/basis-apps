@@ -1,4 +1,4 @@
-# BasisApps.link
+# BasisApps.nl
 
 *Sommige apps horen gewoon gratis te zijn.*
 
@@ -72,13 +72,13 @@ Voeg een object toe aan `apps`:
 Alleen voor apps die in `apps.json` staan:
 
 ```html
-<a href="https://basisapps.link">
-  <img src="https://basisapps.link/badge.svg" alt="Basis Certified" width="200" height="48">
+<a href="https://basisapps.nl">
+  <img src="https://basisapps.nl/badge.svg" alt="Basis Certified" width="200" height="48">
 </a>
 ```
 
 ```md
-[![Basis Certified](https://basisapps.link/badge.svg)](https://basisapps.link)
+[![Basis Certified](https://basisapps.nl/badge.svg)](https://basisapps.nl)
 ```
 
 ## Deployen op Cloudflare Pages
@@ -89,7 +89,7 @@ Alleen voor apps die in `apps.json` staan:
    - Framework preset: **None**
    - Build command: *leeg laten*
    - Build output directory: `/`
-4. Na de eerste deploy: **Custom domains** → voeg `basisapps.link` toe en volg de DNS-stappen.
+4. Na de eerste deploy: **Custom domains** → voeg `basisapps.nl` toe en volg de DNS-stappen.
 5. Elke push naar `main` deployt automatisch.
 
 ## Nog in te vullen
