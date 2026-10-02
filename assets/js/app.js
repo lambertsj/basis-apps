@@ -35,8 +35,8 @@
     var a = el(
       "a",
       primary
-        ? "inline-flex items-center rounded-lg bg-green-800 px-3 py-2 text-sm font-medium text-white hover:bg-green-900"
-        : "inline-flex items-center rounded-lg border border-zinc-300 px-3 py-2 text-sm font-medium hover:bg-zinc-100 dark:border-zinc-600 dark:hover:bg-zinc-800",
+        ? "inline-flex items-center rounded-lg bg-green-800 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-green-900 active:scale-[0.98]"
+        : "inline-flex items-center rounded-lg px-2.5 py-2 text-sm font-medium text-stone-600 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-900 hover:decoration-green-700 dark:text-stone-400 dark:decoration-stone-700 dark:hover:text-stone-100 dark:hover:decoration-green-400",
       label
     );
     a.href = href;
@@ -52,36 +52,53 @@
     return c ? c.label : id;
   }
 
+  function certifiedBadge() {
+    var ns = "http://www.w3.org/2000/svg";
+    var badge = el(
+      "span",
+      "inline-flex shrink-0 items-center gap-1 rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-900 ring-1 ring-inset ring-green-800/15 dark:bg-green-400/10 dark:text-green-300 dark:ring-green-400/20"
+    );
+    var svg = document.createElementNS(ns, "svg");
+    svg.setAttribute("viewBox", "0 0 16 16");
+    svg.setAttribute("class", "h-3 w-3");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "2.2");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    svg.setAttribute("aria-hidden", "true");
+    var path = document.createElementNS(ns, "path");
+    path.setAttribute("d", "M3 8.5l3.2 3.2L13 4.8");
+    svg.appendChild(path);
+    badge.appendChild(svg);
+    badge.appendChild(document.createTextNode("Basis Certified"));
+    return badge;
+  }
+
   function card(app) {
     var article = el(
       "article",
-      "flex flex-col rounded-2xl border border-zinc-200 bg-white p-5 dark:border-zinc-700 dark:bg-zinc-900"
+      "flex flex-col rounded-xl bg-stone-50 p-6 ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-24px_rgba(20,83,45,0.4)] dark:bg-stone-950 dark:ring-white/10 dark:hover:shadow-none"
     );
 
     var head = el("div", "flex items-start justify-between gap-3");
-    head.appendChild(el("h3", "text-lg font-semibold", app.name));
-    head.appendChild(
-      el(
-        "span",
-        "shrink-0 rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-900 dark:bg-green-900/40 dark:text-green-200",
-        "Basis Certified"
-      )
-    );
+    head.appendChild(el("h3", "text-xl font-semibold tracking-tight", app.name));
+    head.appendChild(certifiedBadge());
     article.appendChild(head);
 
     article.appendChild(
-      el("p", "mt-1 text-sm font-medium text-zinc-700 dark:text-zinc-300", app.tagline)
+      el("p", "mt-2 font-medium text-stone-800 dark:text-stone-200", app.tagline)
     );
     article.appendChild(
-      el("p", "mt-3 flex-1 text-sm text-zinc-600 dark:text-zinc-400", app.description)
+      el("p", "mt-3 flex-1 text-pretty text-sm leading-relaxed text-stone-600 dark:text-stone-400", app.description)
     );
 
     var meta = [categoryLabel(app.category)]
       .concat(Array.isArray(app.platforms) ? app.platforms : [])
       .join(" · ");
-    article.appendChild(el("p", "mt-4 text-xs text-zinc-500 dark:text-zinc-500", meta));
+    article.appendChild(el("p", "mt-5 text-xs text-stone-500", meta));
 
-    var actions = el("div", "mt-4 flex flex-wrap gap-2");
+    var actions = el("div", "mt-4 flex flex-wrap items-center gap-x-1 gap-y-2");
     var url = safeUrl(app.url);
     var source = safeUrl(app.source);
     var website = safeUrl(app.website);
@@ -91,7 +108,7 @@
       actions.appendChild(
         el(
           "span",
-          "inline-flex items-center rounded-lg bg-zinc-100 px-3 py-2 text-sm text-zinc-600 dark:bg-zinc-800 dark:text-zinc-400",
+          "inline-flex items-center rounded-lg bg-stone-200/70 px-3.5 py-2 text-sm text-stone-600 dark:bg-stone-800 dark:text-stone-400",
           "Link volgt binnenkort"
         )
       );
@@ -129,10 +146,10 @@
       var active = c.id === state.category;
       var b = el(
         "button",
-        "rounded-full border px-3 py-1.5 text-sm " +
+        "rounded-md border px-3 py-1.5 text-sm transition active:scale-[0.97] " +
           (active
             ? "border-green-800 bg-green-800 text-white"
-            : "border-zinc-300 hover:bg-zinc-100 dark:border-zinc-600 dark:hover:bg-zinc-800"),
+            : "border-stone-300 hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800"),
         c.label
       );
       b.type = "button";

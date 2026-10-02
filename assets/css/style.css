@@ -1,5 +1,27 @@
 /* Aanvullingen op Tailwind (CDN). Houd dit bestand klein. */
 
+/* Geist, zelf gehost: geen verzoeken naar Google Fonts, passend bij "geen tracking". */
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/geist-ext.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308,
+    U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113,
+    U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Geist";
+  src: url("../fonts/geist.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
+    U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5rem;
@@ -17,10 +39,75 @@ html {
   border-radius: 4px;
 }
 
+/* Fijne korrel over de hele pagina, tegen het steriele vlakke gevoel. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-color-scheme: dark) {
+  body::before {
+    opacity: 0.07;
+    mix-blend-mode: screen;
+  }
+}
+
+/* Zachte groene gloed rechtsboven in de hero. */
+.hero-glow {
+  background-image: radial-gradient(
+    60rem 28rem at 85% -10%,
+    rgba(22, 101, 52, 0.09),
+    transparent 70%
+  );
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-glow {
+    background-image: radial-gradient(
+      60rem 28rem at 85% -10%,
+      rgba(74, 222, 128, 0.07),
+      transparent 70%
+    );
+  }
+}
+
+/* Gespreide intro van de hero. Alleen transform en opacity. */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.rise {
+  animation: rise 600ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--d, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise {
+    animation: none;
+  }
+}
+
 /* De badge heeft een witte achtergrond en blijft ook in dark mode leesbaar. */
 .badge-preview {
   background: #ffffff;
   border-radius: 12px;
+}
+
+/* Grid-kinderen mogen krimpen, zodat brede codeblokken scrollen in plaats van de pagina op te rekken. */
+.grid > * {
+  min-width: 0;
 }
 
 code,
