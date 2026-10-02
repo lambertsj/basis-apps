@@ -37,6 +37,7 @@
       "description": "Registreer je ritten met de leaseauto en zie of je onder de 500 privékilometers blijft. Geen automatische GPS-tracking; ritten worden gesynchroniseerd zodat je meerdere toestellen kunt gebruiken.",
       "category": "administratie",
       "platforms": ["iOS", "Android"],
+      "icon": "assets/icons/ritlogger.png",
       "url": "https://apps.apple.com/nl/app/ritlogger-rittenregistratie/id6479636230",
       "playStore": "https://play.google.com/store/apps/details?id=com.mrijntjes.ritlogger",
       "website": "https://www.ritlogger.nl",
