@@ -29,6 +29,18 @@
       "source": "https://github.com/lambertsj/bezichtiging-apps",
       "website": "https://bezichtiging.app",
       "added": "2026-09-30"
+    },
+    {
+      "id": "ritlogger",
+      "name": "RitLogger",
+      "tagline": "Zakelijke en privékilometers bijhouden voor de Belastingdienst.",
+      "description": "Registreer je ritten met de leaseauto en zie of je onder de 500 privékilometers blijft. Geen automatische GPS-tracking; ritten worden gesynchroniseerd zodat je meerdere toestellen kunt gebruiken.",
+      "category": "administratie",
+      "platforms": ["iOS", "Android"],
+      "url": "https://apps.apple.com/nl/app/ritlogger-rittenregistratie/id6479636230",
+      "playStore": "https://play.google.com/store/apps/details?id=com.mrijntjes.ritlogger",
+      "website": "https://www.ritlogger.nl",
+      "added": "2026-10-02"
     }
   ]
 }
