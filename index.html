@@ -31,6 +31,31 @@
     };
   </script>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://basisapps.nl/#organisatie",
+        "name": "BasisApps",
+        "url": "https://basisapps.nl/",
+        "logo": "https://basisapps.nl/favicon.svg",
+        "founder": { "@type": "Person", "name": "Jeroen Lamberts" },
+        "sameAs": ["https://github.com/lambertsj/basis-apps"]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://basisapps.nl/#website",
+        "name": "BasisApps",
+        "url": "https://basisapps.nl/",
+        "description": "Een nuchtere gids met Nederlandse apps die gratis, reclamevrij en privacy-vriendelijk zijn.",
+        "inLanguage": "nl-NL",
+        "publisher": { "@id": "https://basisapps.nl/#organisatie" }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="bg-[#fffef9] font-sans text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100">
 
