@@ -187,11 +187,12 @@
 
     var actions = el("div", "mt-4 flex flex-wrap items-center gap-x-1 gap-y-2");
     var url = safeUrl(app.url);
+    var playStore = safeUrl(app.playStore);
     var source = safeUrl(app.source);
     var website = safeUrl(app.website);
-    if (url) {
-      actions.appendChild(linkButton(storeLabel(url), url, true));
-    } else {
+    if (url) actions.appendChild(linkButton(storeLabel(url), url, true));
+    if (playStore) actions.appendChild(linkButton("Bekijk in Play Store", playStore, true));
+    if (!url && !playStore) {
       actions.appendChild(
         el(
           "span",
