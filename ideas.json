@@ -1,0 +1,52 @@
+{
+  "ideas": [
+    {
+      "id": "bonnetjesscanner",
+      "name": "Bonnetjesscanner",
+      "pitch": "Fotografeer een kassabon en bewaar hem met bedrag en datum, alleen op je eigen toestel.",
+      "effort": "paar-weekenden"
+    },
+    {
+      "id": "urentracker",
+      "name": "Urentracker",
+      "pitch": "Start en stop een timer per klus en exporteer je uren aan het eind van de maand.",
+      "effort": "weekend"
+    },
+    {
+      "id": "boodschappenlijst",
+      "name": "Boodschappenlijst",
+      "pitch": "Een lijstje met afvinken, gesorteerd op de route door jouw supermarkt.",
+      "effort": "weekend"
+    },
+    {
+      "id": "abonnementen",
+      "name": "Abonnementenoverzicht",
+      "pitch": "Zie wat je elke maand betaalt en krijg een seintje vóór een abonnement verlengt.",
+      "effort": "weekend"
+    },
+    {
+      "id": "garantie",
+      "name": "Garantiebewaarder",
+      "pitch": "Bewaar bon en einddatum van garantie, zodat je bij een defect niet hoeft te zoeken.",
+      "effort": "paar-weekenden"
+    },
+    {
+      "id": "huisonderhoud",
+      "name": "Huisonderhoud",
+      "pitch": "Wanneer moest de cv-ketel ook alweer nagekeken worden? Een logboek met herinneringen.",
+      "effort": "weekend"
+    },
+    {
+      "id": "planten",
+      "name": "Plantenverzorging",
+      "pitch": "Houd bij welke plant wanneer water, voeding of een nieuwe pot nodig heeft.",
+      "effort": "weekend"
+    },
+    {
+      "id": "verrekenen",
+      "name": "Wie betaalt wat",
+      "pitch": "Verreken uitgaven met huisgenoten of vrienden, zonder account en zonder advertenties.",
+      "effort": "paar-weekenden"
+    }
+  ]
+}

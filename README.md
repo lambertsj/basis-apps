@@ -10,9 +10,13 @@ BasisApps is een nuchtere gids met Nederlandse apps die **gratis, reclamevrij en
 basisapps/
 ├── index.html            # Landing page, manifest, showcase, keurmerk, aanmelden
 ├── apps.json             # "Database" met goedgekeurde apps
+├── ideas.json            # Ideeën voor developers die nog niet weten wat ze bouwen
+├── waarom/index.html     # Verhaal: waarom BasisApps bestaat
+├── 404.html              # Pagina niet gevonden
 ├── badge.svg             # De Basis Certified badge
 ├── assets/
 │   ├── js/app.js         # Laadt apps.json, zoekt en filtert
+│   ├── js/ideas.js       # Laadt ideas.json en toont de ideeëntegels
 │   ├── css/style.css     # Kleine aanvullingen op Tailwind
 │   ├── fonts/            # Geist, zelf gehost
 │   └── icons/            # App-iconen voor de kaarten
@@ -70,6 +74,22 @@ Voeg een object toe aan `apps`:
 - `url`, `source` en `website` mogen `null` of weggelaten zijn. Alleen `http(s)`-links worden getoond.
 - `icon` is optioneel: een bestand in `assets/icons/` (vierkant, minimaal 512 px, zonder afgeronde hoeken). Zonder icoon toont de site een tegel met de beginletter. Icoon niet van een externe site inladen, dat zou bezoekers volgen.
 - Alle tekst wordt als platte tekst weergegeven. HTML wordt niet uitgevoerd.
+
+### Een idee toevoegen
+
+Voeg een object toe aan `ideas` in `ideas.json`:
+
+```json
+{
+  "id": "mijn-idee",
+  "name": "Naam van het idee",
+  "pitch": "Eén of twee zinnen over wat de app zou doen.",
+  "effort": "weekend"
+}
+```
+
+- `effort` is `weekend` of `paar-weekenden`.
+- Een idee hoort bij een basisfunctie die past bij het manifest. Het mag geen app zijn die inkomsten uit gegevens of advertenties nodig heeft.
 
 ## De badge gebruiken
 

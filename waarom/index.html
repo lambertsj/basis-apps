@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waarom BasisApps bestaat — het verhaal van Jeroen</title>
+  <meta name="description" content="Betaalmuren in simpele apps, in-app aankopen en gratis apps die je nergens kunt vinden. Jeroen vertelt waarom hij BasisApps begon.">
+  <link rel="canonical" href="https://basisapps.nl/waarom/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Waarom BasisApps bestaat">
+  <meta property="og:description" content="Betaalmuren in simpele apps, in-app aankopen en gratis apps die je nergens kunt vinden. Waarom ik BasisApps begon.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://basisapps.nl/waarom/">
+  <meta property="og:image" content="https://basisapps.nl/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="BasisApps: Sommige apps horen gewoon gratis te zijn.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preload" href="/assets/fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Geist", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="bg-[#fffef9] font-sans text-stone-900 antialiased dark:bg-stone-950 dark:text-stone-100">
+
+  <a href="#inhoud" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-3 focus:py-2 focus:text-stone-900">Ga naar de inhoud</a>
+
+  <header class="sticky top-0 z-30 border-b border-stone-200/70 bg-[#fffef9]/85 backdrop-blur dark:border-stone-800/80 dark:bg-stone-950/85">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 min-[420px]:px-5">
+      <a href="/" class="inline-flex items-center gap-2 text-base font-semibold tracking-tight min-[420px]:text-lg"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-green-700 dark:bg-green-400"></span><span>Basis<span class="text-green-700 dark:text-green-400">Apps</span></span></a>
+      <nav aria-label="Hoofdmenu" class="flex items-center gap-2 text-[13px] text-stone-600 dark:text-stone-400 min-[380px]:gap-3 sm:gap-7 sm:text-sm">
+        <a href="/#manifest" class="transition-colors hover:text-stone-900 dark:hover:text-stone-100">Manifest</a>
+        <a href="/#apps" class="transition-colors hover:text-stone-900 dark:hover:text-stone-100">Apps</a>
+        <a href="/#keurmerk" class="hidden transition-colors hover:text-stone-900 dark:hover:text-stone-100 min-[420px]:inline">Keurmerk</a>
+        <a href="/#aanmelden" class="rounded-full bg-amber-200 px-3 py-1.5 font-medium text-stone-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.6)] transition hover:bg-amber-300 active:scale-[0.97] dark:bg-amber-300 dark:hover:bg-amber-200">Aanmelden</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhoud">
+
+    <!-- Kop -->
+    <section class="hero-glow overflow-hidden">
+      <div class="mx-auto max-w-3xl px-5 pb-14 pt-14 sm:pt-20">
+        <p class="rise text-sm font-medium text-green-800 dark:text-green-400" style="--d:0ms"><a class="underline-offset-4 hover:underline" href="/">BasisApps</a> <span aria-hidden="true" class="text-stone-400">/</span> Waarom</p>
+        <h1 class="rise mt-5 text-balance text-5xl font-semibold leading-[1.03] tracking-tighter sm:text-6xl" style="--d:80ms">Waarom ik BasisApps <span class="text-green-800 dark:text-green-400">ben begonnen.</span></h1>
+        <p class="rise mt-7 text-pretty text-xl leading-relaxed text-stone-700 dark:text-stone-300 sm:text-2xl sm:leading-relaxed" style="--d:160ms">
+          Een lijstje bijhouden. Je uren noteren. Een rit opschrijven. Het zijn kleine klusjes, en toch zit er steeds een betaalmuur tussen jou en de app die ze doet.
+        </p>
+        <p class="rise mt-8 flex items-center gap-3 text-sm text-stone-500" style="--d:240ms">
+          <span aria-hidden="true" class="grid h-9 w-9 place-items-center rounded-full bg-green-800 text-sm font-semibold text-white">J</span>
+          <span>Door <strong class="font-medium text-stone-900 dark:text-stone-100">Jeroen</strong>, maker van BasisApps</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Verhaal -->
+    <article class="mx-auto max-w-3xl px-5 pb-8">
+
+      <section class="py-10 sm:py-12" aria-labelledby="w1">
+        <p class="text-sm font-medium tabular-nums text-stone-400 dark:text-stone-600">01</p>
+        <h2 id="w1" class="mt-2 text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Eerst de betaalmuur, dan de app</h2>
+        <div class="mt-6 space-y-5 text-pretty text-lg leading-relaxed text-stone-700 dark:text-stone-300">
+          <p>Je downloadt een app voor iets simpels. Je opent hem, en voordat je iets hebt kunnen doen krijg je een scherm met een proefperiode, een abonnement of een knop met &ldquo;Probeer gratis&rdquo;. Wil je iets echt gebruiken, dan is er een in-app aankoop.</p>
+          <p>Ik vind dat <mark class="marker">frustrerend</mark>. Niet omdat ontwikkelaars niet mogen verdienen aan hun werk. Dat mogen ze, en vaak is dat terecht. Maar de verhouding klopt niet meer als je maandelijks betaalt voor een boodschappenlijst, een timer of een kilometerregistratie.</p>
+        </div>
+      </section>
+
+      <section class="py-10 sm:py-12" aria-labelledby="w2">
+        <p class="text-sm font-medium tabular-nums text-stone-400 dark:text-stone-600">02</p>
+        <h2 id="w2" class="mt-2 text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Terwijl bouwen nog nooit zo makkelijk was</h2>
+        <div class="mt-6 space-y-5 text-pretty text-lg leading-relaxed text-stone-700 dark:text-stone-300">
+          <p>Dat is het wrange. Iedereen kan tegenwoordig een app bouwen. Het gereedschap is beter dan ooit, er is gratis leermateriaal en met AI kom je een heel eind. Een simpele app staat in een paar weekenden.</p>
+          <p>Wie zelf een urentracker kan bouwen, kan hem ook gratis weggeven. Er is geen technische reden meer waarom <mark class="marker">basisfuncties geld moeten kosten</mark>. Het is een keuze, en dat kan anders.</p>
+        </div>
+      </section>
+
+      <aside class="my-4 rounded-[2rem] bg-amber-100/80 p-7 ring-1 ring-amber-900/5 dark:bg-amber-300/10 dark:ring-amber-200/10 sm:p-10" aria-label="Kernpunt">
+        <p class="text-balance text-2xl font-semibold leading-snug tracking-tight sm:text-3xl">Wat een app doet is vaak simpel. Wat hij van je vraagt is dat niet.</p>
+      </aside>
+
+      <section class="py-10 sm:py-12" aria-labelledby="w3">
+        <p class="text-sm font-medium tabular-nums text-stone-400 dark:text-stone-600">03</p>
+        <h2 id="w3" class="mt-2 text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">En de eerlijke apps zijn bijna onvindbaar</h2>
+        <div class="mt-6 space-y-5 text-pretty text-lg leading-relaxed text-stone-700 dark:text-stone-300">
+          <p>Want ze bestaan wel: gratis, open source, soms ook nog Nederlands. Maar ze vinden is lastig. In de App Store kun je niet filteren op &ldquo;echt gratis, zonder advertenties, zonder trackers&rdquo;, en ook niet op &ldquo;gemaakt in Nederland&rdquo;.</p>
+          <p>&ldquo;Gratis&rdquo; zegt daarbij bijna niets. Het kan ook betekenen dat je betaalt met advertenties of met je gegevens. Dus open je elke app, lees je het privacylabel en hoop je dat het klopt. Open-sourceapps staan verspreid over GitHub en losse websites, en zijn daar voor niet-technische mensen moeilijk te vinden.</p>
+          <p>Het kost uren om een eerlijke app te vinden. De meeste mensen doen dat niet, en nemen dan toch het abonnement.</p>
+        </div>
+      </section>
+
+      <section class="py-10 sm:py-12" aria-labelledby="w4">
+        <p class="text-sm font-medium tabular-nums text-stone-400 dark:text-stone-600">04</p>
+        <h2 id="w4" class="mt-2 text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">Dus begon ik een verzamelplek</h2>
+        <div class="mt-6 space-y-5 text-pretty text-lg leading-relaxed text-stone-700 dark:text-stone-300">
+          <p>BasisApps is dat. Eén plek met alleen apps die aan <a class="font-medium text-stone-900 underline decoration-green-700/60 decoration-2 underline-offset-4 transition hover:decoration-green-700 dark:text-stone-100 dark:decoration-green-400/60 dark:hover:decoration-green-400" href="/#manifest">dezelfde vijf afspraken</a> voldoen: echt gratis, reclamevrij, geen trackers, jouw gegevens blijven van jou, en alles openbaar. Je hoeft het niet meer zelf uit te zoeken.</p>
+          <p>Wie een app maakt die eraan voldoet, krijgt het open keurmerk <a class="font-medium text-stone-900 underline decoration-green-700/60 decoration-2 underline-offset-4 transition hover:decoration-green-700 dark:text-stone-100 dark:decoration-green-400/60 dark:hover:decoration-green-400" href="/#keurmerk">Basis Certified</a>. Elke aanmelding en elke beoordeling staat openbaar op GitHub, zodat je niet op mijn woord hoeft te vertrouwen.</p>
+          <p>De eerste twee apps in de gids heb ik zelf gemaakt. Ik hoop dat er snel meer bijkomen, van anderen.</p>
+        </div>
+
+        <div class="mt-8 rounded-2xl bg-stone-100/80 p-6 ring-1 ring-stone-900/5 dark:bg-stone-900/60 dark:ring-white/10">
+          <p class="font-semibold tracking-tight">Wat BasisApps niet is</p>
+          <p class="mt-2 text-pretty text-stone-600 dark:text-stone-400">Geen nieuwe app store en geen bedrijf dat aan jou wil verdienen. Er zijn op deze site geen advertenties, geen cookies en geen tracking.</p>
+        </div>
+      </section>
+
+    </article>
+
+    <!-- Afsluiter -->
+    <section class="mx-auto max-w-3xl px-5 pb-16 sm:pb-24" aria-labelledby="w5">
+      <div class="cta-block overflow-hidden rounded-[2rem] bg-[#fde9a2] px-6 py-12 text-center ring-1 ring-amber-900/10 dark:bg-amber-300/10 dark:ring-amber-200/15 sm:px-12 sm:py-16">
+        <h2 id="w5" class="text-balance text-3xl font-semibold leading-tight tracking-tighter sm:text-4xl">Doe je mee?</h2>
+        <p class="mx-auto mt-3 max-w-md text-pretty text-lg text-stone-700 dark:text-stone-300">Zoek een app die geen abonnement vraagt, of bouw er zelf een en laat hem hier zetten.</p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <a href="/#apps" class="rounded-xl bg-stone-900 px-6 py-3.5 font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_10px_24px_-10px_rgba(28,25,23,0.7)] transition hover:bg-black active:translate-y-px active:scale-[0.98] dark:bg-amber-300 dark:text-stone-900 dark:hover:bg-amber-200">Bekijk de apps</a>
+          <a href="/#ideeen" class="rounded-xl bg-white/70 px-6 py-3.5 font-medium text-stone-900 ring-1 ring-amber-900/15 transition hover:bg-white active:translate-y-px active:scale-[0.98] dark:bg-stone-900/70 dark:text-stone-100 dark:ring-white/15 dark:hover:bg-stone-900">Bouw er zelf een</a>
+        </div>
+        <p class="mt-8 text-sm text-stone-600 dark:text-stone-400">Jeroen</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-stone-200/70 dark:border-stone-800/80">
+    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 text-sm text-stone-500 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <a href="/" class="inline-flex items-center gap-2 text-lg font-semibold tracking-tight text-stone-900 dark:text-stone-100"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-green-700 dark:bg-green-400"></span><span>Basis<span class="text-green-700 dark:text-green-400">Apps</span></span></a>
+        <p class="mt-2">Open source, geen cookies, geen tracking.</p>
+      </div>
+      <nav aria-label="Voettekst" class="flex flex-wrap gap-x-6 gap-y-2">
+        <a class="transition-colors hover:text-stone-900 dark:hover:text-stone-100" href="/#manifest">Manifest</a>
+        <a class="transition-colors hover:text-stone-900 dark:hover:text-stone-100" href="/#apps">Apps</a>
+        <a class="transition-colors hover:text-stone-900 dark:hover:text-stone-100" href="/#ideeen">Ideeën</a>
+        <a class="transition-colors hover:text-stone-900 dark:hover:text-stone-100" href="/#keurmerk">Keurmerk</a>
+        <a class="transition-colors hover:text-stone-900 dark:hover:text-stone-100" href="/waarom/" aria-current="page">Waarom</a>
+        <a class="transition-colors hover:text-stone-900 dark:hover:text-stone-100" href="https://github.com/lambertsj/basis-apps" rel="noopener noreferrer">Broncode op GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
