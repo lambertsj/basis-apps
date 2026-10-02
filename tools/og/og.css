@@ -1,0 +1,24 @@
+@font-face{font-family:"Geist";src:url("../../assets/fonts/geist-ext.woff2") format("woff2");font-weight:100 900}
+@font-face{font-family:"Geist";src:url("../../assets/fonts/geist.woff2") format("woff2");font-weight:100 900}
+*{box-sizing:border-box;margin:0}
+html,body{width:1200px;height:630px;overflow:hidden}
+body{font-family:"Geist",system-ui,sans-serif;background:#fbf7ec;color:#1c1917;position:relative;-webkit-font-smoothing:antialiased}
+.blob{position:absolute;border-radius:50%}
+.b1{width:520px;height:520px;right:-120px;top:-170px;background:#fde68a}
+.b2{width:380px;height:380px;right:150px;bottom:-230px;background:#bbf7d0}
+.logo{position:absolute;left:80px;top:60px;display:flex;align-items:center;gap:14px;font-size:38px;font-weight:700;letter-spacing:-.04em}
+.logo i{width:30px;height:30px;border-radius:50%;background:#166534}
+.logo b{color:#166534}
+h1{position:absolute;left:80px;top:170px;width:700px;font-size:92px;line-height:1;font-weight:700;letter-spacing:-.055em}
+.hl{position:relative;display:inline-block;z-index:0;color:#14532d}
+.hl:before{content:"";position:absolute;left:-10px;right:-10px;bottom:6px;height:44%;background:#fcd34d;border-radius:10px;transform:rotate(-1.5deg);z-index:-1}
+.foot{position:absolute;left:80px;bottom:56px;display:flex;gap:14px}
+.chip{padding:10px 20px;border-radius:999px;font-size:26px;font-weight:600;background:#fef3c7;color:#451a03;box-shadow:0 0 0 2px rgba(69,26,3,.08)}
+.chip:nth-child(2){transform:rotate(-1.5deg)}.chip:nth-child(3){transform:rotate(1deg)}
+.card{position:absolute;background:#fff;border-radius:44px;padding:16px;box-shadow:0 24px 50px -12px rgba(28,25,23,.28),0 0 0 1px rgba(28,25,23,.06)}
+.card img{display:block;width:210px;height:210px;border-radius:30px}
+.card span{display:block;text-align:center;font-weight:700;font-size:24px;margin-top:12px;letter-spacing:-.02em}
+.c1{right:300px;top:130px;transform:rotate(-7deg)}
+.c2{right:60px;top:250px;transform:rotate(6deg)}
+.stamp{position:absolute;right:190px;top:96px;transform:rotate(9deg);background:#166534;color:#fff;font-weight:800;font-size:40px;letter-spacing:-.03em;padding:12px 28px;border-radius:999px;box-shadow:0 12px 24px -8px rgba(22,101,52,.5);z-index:3}
+.badge{position:absolute;right:60px;bottom:50px;padding:12px 26px;border-radius:999px;border:3px solid #166534;color:#166534;font-weight:700;font-size:28px;background:#fff}
