@@ -44,7 +44,42 @@
     return node;
   }
 
-  function linkButton(label, href, primary) {
+  var ICONS = {
+    globe: {
+      stroke: true,
+      d: ["M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18z", "M3 12h18", "M12 3c2.5 2.4 3.8 5.4 3.8 9s-1.3 6.6-3.8 9c-2.5-2.4-3.8-5.4-3.8-9S9.5 5.4 12 3z"]
+    },
+    github: {
+      stroke: false,
+      d: ["M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.59.23 2.76.11 3.05.74.81 1.18 1.83 1.18 3.09 0 4.42-2.7 5.4-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"]
+    }
+  };
+
+  function icon(name) {
+    var ns = "http://www.w3.org/2000/svg";
+    var def = ICONS[name];
+    var svg = document.createElementNS(ns, "svg");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.setAttribute("class", "mr-1.5 h-4 w-4 shrink-0");
+    svg.setAttribute("aria-hidden", "true");
+    if (def.stroke) {
+      svg.setAttribute("fill", "none");
+      svg.setAttribute("stroke", "currentColor");
+      svg.setAttribute("stroke-width", "1.8");
+      svg.setAttribute("stroke-linecap", "round");
+      svg.setAttribute("stroke-linejoin", "round");
+    } else {
+      svg.setAttribute("fill", "currentColor");
+    }
+    def.d.forEach(function (d) {
+      var path = document.createElementNS(ns, "path");
+      path.setAttribute("d", d);
+      svg.appendChild(path);
+    });
+    return svg;
+  }
+
+  function linkButton(label, href, primary, iconName) {
     var a = el(
       "a",
       primary
@@ -52,6 +87,7 @@
         : "inline-flex items-center rounded-full px-2 py-2 text-sm font-medium text-stone-600 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-900 hover:decoration-green-700 dark:text-stone-400 dark:decoration-stone-700 dark:hover:text-stone-100 dark:hover:decoration-green-400",
       label
     );
+    if (iconName) a.insertBefore(icon(iconName), a.firstChild);
     a.href = href;
     a.rel = "noopener noreferrer";
     a.target = "_blank";
@@ -158,8 +194,8 @@
         )
       );
     }
-    if (website) actions.appendChild(linkButton("Website", website, false));
-    if (source) actions.appendChild(linkButton("Broncode", source, false));
+    if (website) actions.appendChild(linkButton("Website", website, false, "globe"));
+    if (source) actions.appendChild(linkButton("Broncode", source, false, "github"));
     body.appendChild(actions);
     article.appendChild(body);
 
