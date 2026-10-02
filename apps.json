@@ -12,6 +12,7 @@
       "description": "Registreer je ritten voor de belasting of je werkgever. Je gegevens blijven op je eigen toestel.",
       "category": "administratie",
       "platforms": ["iOS"],
+      "icon": "assets/icons/kilometerregistratie.jpg",
       "url": "https://apps.apple.com/nl/app/kilometerregistratie-nl/id6791920895",
       "source": "https://github.com/lambertsj/Kilometerregistratie",
       "added": "2026-09-30"
@@ -23,6 +24,7 @@
       "description": "Noteer per woning wat je zag, wat je vond en wat je nog wilt weten, zodat je later eerlijk kunt vergelijken.",
       "category": "wonen",
       "platforms": ["iOS"],
+      "icon": "assets/icons/bezichtiging.jpg",
       "url": "https://apps.apple.com/nl/app/bezichtiging-huis-checklist/id6774289434",
       "source": "https://github.com/lambertsj/bezichtiging-apps",
       "website": "https://bezichtiging.app",

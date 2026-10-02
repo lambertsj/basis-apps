@@ -14,6 +14,13 @@
     count: document.getElementById("app-count"),
   };
 
+  // Gloed achter het icoon per categorie. Volledige klassenamen, zodat Tailwind ze vindt.
+  var TILE_TINT = {
+    administratie: "from-white to-green-100/80 dark:from-stone-900 dark:to-green-950/50",
+    wonen: "from-white to-amber-100/80 dark:from-stone-900 dark:to-amber-950/40",
+  };
+  var TILE_TINT_DEFAULT = "from-white to-stone-100 dark:from-stone-900 dark:to-stone-800/60";
+
   function safeUrl(value) {
     if (typeof value !== "string") return null;
     try {
@@ -22,6 +29,12 @@
     } catch (e) {
       return null;
     }
+  }
+
+  // Iconen staan lokaal in assets/icons/. Geen externe adressen: dat zou bezoekers volgen.
+  function safeIcon(value) {
+    if (typeof value !== "string") return null;
+    return /^assets\/icons\/[A-Za-z0-9._-]+\.(png|jpe?g|webp|svg)$/.test(value) ? value : null;
   }
 
   function el(tag, className, text) {
@@ -35,8 +48,8 @@
     var a = el(
       "a",
       primary
-        ? "inline-flex items-center rounded-lg bg-green-800 px-3.5 py-2 text-sm font-medium text-white transition hover:bg-green-900 active:scale-[0.98]"
-        : "inline-flex items-center rounded-lg px-2.5 py-2 text-sm font-medium text-stone-600 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-900 hover:decoration-green-700 dark:text-stone-400 dark:decoration-stone-700 dark:hover:text-stone-100 dark:hover:decoration-green-400",
+        ? "inline-flex items-center rounded-full bg-green-800 px-4 py-2 text-sm font-medium text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_1px_2px_rgba(20,83,45,0.35)] transition hover:bg-green-900 active:scale-[0.98]"
+        : "inline-flex items-center rounded-full px-2 py-2 text-sm font-medium text-stone-600 underline decoration-stone-300 underline-offset-4 transition hover:text-stone-900 hover:decoration-green-700 dark:text-stone-400 dark:decoration-stone-700 dark:hover:text-stone-100 dark:hover:decoration-green-400",
       label
     );
     a.href = href;
@@ -56,7 +69,7 @@
     var ns = "http://www.w3.org/2000/svg";
     var badge = el(
       "span",
-      "inline-flex shrink-0 items-center gap-1 rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-900 ring-1 ring-inset ring-green-800/15 dark:bg-green-400/10 dark:text-green-300 dark:ring-green-400/20"
+      "absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/90 px-2.5 py-1 text-xs font-medium text-green-900 shadow-sm ring-1 ring-green-800/15 backdrop-blur dark:bg-stone-900/80 dark:text-green-300 dark:ring-green-400/20"
     );
     var svg = document.createElementNS(ns, "svg");
     svg.setAttribute("viewBox", "0 0 16 16");
@@ -75,28 +88,60 @@
     return badge;
   }
 
+  var ICON_CLASS =
+    "h-24 w-24 rounded-[22%] shadow-[0_18px_34px_-10px_rgba(28,25,23,0.45),0_0_0_1px_rgba(28,25,23,0.06)] transition duration-500 group-hover:-translate-y-1 group-hover:scale-105 group-hover:-rotate-2";
+
+  function iconTile(app) {
+    var tint = TILE_TINT[app.category] || TILE_TINT_DEFAULT;
+    var tile = el(
+      "div",
+      "relative grid aspect-[4/3] place-items-center rounded-[1.4rem] bg-gradient-to-b " + tint
+    );
+    var src = safeIcon(app.icon);
+    if (src) {
+      var img = el("img", ICON_CLASS);
+      img.src = src;
+      img.alt = "";
+      img.width = 96;
+      img.height = 96;
+      tile.appendChild(img);
+    } else {
+      var letter = el(
+        "div",
+        ICON_CLASS + " grid place-items-center bg-green-800 text-4xl font-semibold text-white",
+        String(app.name || "?").charAt(0).toUpperCase()
+      );
+      letter.setAttribute("aria-hidden", "true");
+      tile.appendChild(letter);
+    }
+    tile.appendChild(certifiedBadge());
+    return tile;
+  }
+
   function card(app) {
     var article = el(
       "article",
-      "flex flex-col rounded-xl bg-stone-50 p-6 ring-1 ring-stone-900/5 transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-24px_rgba(20,83,45,0.4)] dark:bg-stone-950 dark:ring-white/10 dark:hover:shadow-none"
+      "group flex flex-col rounded-[1.9rem] bg-stone-100/80 p-2 ring-1 ring-stone-900/5 transition duration-300 hover:shadow-[0_28px_50px_-30px_rgba(20,83,45,0.5)] dark:bg-stone-800/40 dark:ring-white/10 dark:hover:shadow-none"
     );
+    article.appendChild(iconTile(app));
 
-    var head = el("div", "flex items-start justify-between gap-3");
-    head.appendChild(el("h3", "text-xl font-semibold tracking-tight", app.name));
-    head.appendChild(certifiedBadge());
-    article.appendChild(head);
-
-    article.appendChild(
-      el("p", "mt-2 font-medium text-stone-800 dark:text-stone-200", app.tagline)
+    var body = el("div", "flex flex-1 flex-col px-4 pb-3 pt-5");
+    body.appendChild(el("h3", "text-xl font-semibold tracking-tight", app.name));
+    body.appendChild(
+      el("p", "mt-1.5 font-medium text-stone-800 dark:text-stone-200", app.tagline)
     );
-    article.appendChild(
-      el("p", "mt-3 flex-1 text-pretty text-sm leading-relaxed text-stone-600 dark:text-stone-400", app.description)
+    body.appendChild(
+      el(
+        "p",
+        "mt-3 flex-1 text-pretty text-sm leading-relaxed text-stone-600 dark:text-stone-400",
+        app.description
+      )
     );
 
     var meta = [categoryLabel(app.category)]
       .concat(Array.isArray(app.platforms) ? app.platforms : [])
       .join(" · ");
-    article.appendChild(el("p", "mt-5 text-xs text-stone-500", meta));
+    body.appendChild(el("p", "mt-5 text-xs text-stone-500", meta));
 
     var actions = el("div", "mt-4 flex flex-wrap items-center gap-x-1 gap-y-2");
     var url = safeUrl(app.url);
@@ -108,16 +153,38 @@
       actions.appendChild(
         el(
           "span",
-          "inline-flex items-center rounded-lg bg-stone-200/70 px-3.5 py-2 text-sm text-stone-600 dark:bg-stone-800 dark:text-stone-400",
+          "inline-flex items-center rounded-full bg-stone-200/70 px-4 py-2 text-sm text-stone-600 dark:bg-stone-800 dark:text-stone-400",
           "Link volgt binnenkort"
         )
       );
     }
     if (website) actions.appendChild(linkButton("Website", website, false));
     if (source) actions.appendChild(linkButton("Broncode", source, false));
-    article.appendChild(actions);
+    body.appendChild(actions);
+    article.appendChild(body);
 
     return article;
+  }
+
+  // Uitnodiging in de laatste kolom, alleen zonder filter of zoekterm.
+  function inviteTile() {
+    var a = el(
+      "a",
+      "group flex min-h-[18rem] flex-col items-center justify-center rounded-[1.9rem] border-2 border-dashed border-stone-300 p-8 text-center transition hover:border-green-700 hover:bg-green-50/60 dark:border-stone-700 dark:hover:border-green-400 dark:hover:bg-green-400/5"
+    );
+    a.href = "#aanmelden";
+    a.appendChild(
+      el(
+        "span",
+        "grid h-14 w-14 place-items-center rounded-2xl bg-amber-200 text-3xl font-light text-stone-900 transition duration-300 group-hover:rotate-90 dark:bg-amber-300",
+        "+"
+      )
+    );
+    a.appendChild(el("span", "mt-5 text-xl font-semibold tracking-tight", "Jouw app hier?"));
+    a.appendChild(
+      el("span", "mt-1.5 max-w-[14rem] text-sm text-stone-600 dark:text-stone-400", "Voldoet hij aan het manifest? Meld hem aan.")
+    );
+    return a;
   }
 
   function matches(app) {
@@ -131,7 +198,9 @@
 
   function renderApps() {
     var list = state.apps.filter(matches);
-    els.grid.replaceChildren.apply(els.grid, list.map(card));
+    var nodes = list.map(card);
+    if (state.category === "alle" && !state.query) nodes.push(inviteTile());
+    els.grid.replaceChildren.apply(els.grid, nodes);
     els.count.textContent =
       list.length === 1 ? "1 app gevonden" : list.length + " apps gevonden";
     els.status.hidden = list.length !== 0;
@@ -140,17 +209,27 @@
     }
   }
 
+  function countFor(id) {
+    if (id === "alle") return state.apps.length;
+    return state.apps.filter(function (a) {
+      return a.category === id;
+    }).length;
+  }
+
   function renderFilters() {
     els.filters.replaceChildren();
     state.categories.forEach(function (c) {
       var active = c.id === state.category;
       var b = el(
         "button",
-        "rounded-md border px-3 py-1.5 text-sm transition active:scale-[0.97] " +
+        "inline-flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-sm transition active:scale-[0.97] " +
           (active
-            ? "border-green-800 bg-green-800 text-white"
-            : "border-stone-300 hover:bg-stone-100 dark:border-stone-700 dark:hover:bg-stone-800"),
+            ? "border-transparent bg-amber-200 text-stone-900 shadow-[inset_0_1px_0_rgba(255,255,255,0.5)] dark:bg-amber-300"
+            : "border-stone-300 bg-white hover:border-stone-400 hover:bg-stone-50 dark:border-stone-700 dark:bg-stone-900 dark:hover:bg-stone-800"),
         c.label
+      );
+      b.appendChild(
+        el("span", "text-xs tabular-nums " + (active ? "text-stone-700" : "text-stone-400"), String(countFor(c.id)))
       );
       b.type = "button";
       b.setAttribute("aria-pressed", active ? "true" : "false");

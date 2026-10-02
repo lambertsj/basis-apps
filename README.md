@@ -13,7 +13,9 @@ basisapps/
 ├── badge.svg             # De Basis Certified badge
 ├── assets/
 │   ├── js/app.js         # Laadt apps.json, zoekt en filtert
-│   └── css/style.css     # Kleine aanvullingen op Tailwind
+│   ├── css/style.css     # Kleine aanvullingen op Tailwind
+│   ├── fonts/            # Geist, zelf gehost
+│   └── icons/            # App-iconen voor de kaarten
 ├── .github/ISSUE_TEMPLATE/
 │   └── app_submission.md # Template voor nieuwe aanmeldingen
 └── README.md
@@ -56,6 +58,7 @@ Voeg een object toe aan `apps`:
   "description": "Een of twee zinnen over wat de app doet.",
   "category": "administratie",
   "platforms": ["iOS", "Android"],
+  "icon": "assets/icons/mijn-app.jpg",
   "url": "https://apps.apple.com/...",
   "source": "https://github.com/...",
   "website": "https://...",
@@ -65,6 +68,7 @@ Voeg een object toe aan `apps`:
 
 - `category` moet een `id` zijn uit `categories` bovenaan het bestand.
 - `url`, `source` en `website` mogen `null` of weggelaten zijn. Alleen `http(s)`-links worden getoond.
+- `icon` is optioneel: een bestand in `assets/icons/` (vierkant, minimaal 512 px, zonder afgeronde hoeken). Zonder icoon toont de site een tegel met de beginletter. Icoon niet van een externe site inladen, dat zou bezoekers volgen.
 - Alle tekst wordt als platte tekst weergegeven. HTML wordt niet uitgevoerd.
 
 ## De badge gebruiken
