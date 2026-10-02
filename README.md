@@ -81,6 +81,10 @@ Alleen voor apps die in `apps.json` staan:
 [![Basis Certified](https://basisapps.nl/badge.svg)](https://basisapps.nl)
 ```
 
+## Het groene stipje
+
+Het groene stipje (`#166534`) is het herkenningsteken van BasisApps. Deelnemende apps mogen het op hun eigen app-icoon of in hun materiaal gebruiken, zolang de app aan de vijf afspraken voldoet. Ze mogen ook de term "Basis-app" gebruiken in titel, subtitel en beschrijving.
+
 ## Deployen op Cloudflare Pages
 
 1. Zet de repository op GitHub.
