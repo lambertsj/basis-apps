@@ -154,6 +154,12 @@
     return tile;
   }
 
+  function storeLabel(url) {
+    if (url.indexOf("apps.apple.com") !== -1) return "Bekijk in App Store";
+    if (url.indexOf("play.google.com") !== -1) return "Bekijk in Play Store";
+    return "Bekijk de app";
+  }
+
   function card(app) {
     var article = el(
       "article",
@@ -184,7 +190,7 @@
     var source = safeUrl(app.source);
     var website = safeUrl(app.website);
     if (url) {
-      actions.appendChild(linkButton("Bekijk de app", url, true));
+      actions.appendChild(linkButton(storeLabel(url), url, true));
     } else {
       actions.appendChild(
         el(
@@ -227,6 +233,7 @@
     if (state.category !== "alle" && app.category !== state.category) return false;
     if (!state.query) return true;
     var haystack = [app.name, app.tagline, app.description, categoryLabel(app.category)]
+      .concat(Array.isArray(app.platforms) ? app.platforms : [])
       .join(" ")
       .toLowerCase();
     return haystack.indexOf(state.query) !== -1;

@@ -63,13 +63,14 @@ Voeg een object toe aan `apps`:
   "category": "administratie",
   "platforms": ["iOS", "Android"],
   "icon": "assets/icons/mijn-app.jpg",
-  "url": "https://apps.apple.com/...",
+  "url": "https://apps.apple.com/... of https://play.google.com/...",
   "source": "https://github.com/...",
   "website": "https://...",
   "added": "2026-09-30"
 }
 ```
 
+- `platforms` toont de platformen op de kaart en maakt ze doorzoekbaar. De knop heet "Bekijk in App Store" of "Bekijk in Play Store", afhankelijk van de link in `url`.
 - `category` moet een `id` zijn uit `categories` bovenaan het bestand.
 - `url`, `source` en `website` mogen `null` of weggelaten zijn. Alleen `http(s)`-links worden getoond.
 - `icon` is optioneel: een bestand in `assets/icons/` (vierkant, minimaal 512 px, zonder afgeronde hoeken). Zonder icoon toont de site een tegel met de beginletter. Icoon niet van een externe site inladen, dat zou bezoekers volgen.
