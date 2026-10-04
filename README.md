@@ -58,6 +58,7 @@ Voeg een object toe aan `apps`:
 {
   "id": "mijn-app",
   "name": "Mijn App",
+  "maker": "Naam van de maker",
   "tagline": "Eén korte zin.",
   "description": "Een of twee zinnen over wat de app doet.",
   "category": "administratie",
@@ -71,6 +72,7 @@ Voeg een object toe aan `apps`:
 }
 ```
 
+- `maker` is optioneel en verschijnt als "Gemaakt door …" op de kaart.
 - `platforms` toont de platformen op de kaart en maakt ze doorzoekbaar.
 - `url` is de App Store-link (of een andere link) en `playStore` de Play Store-link. Staan ze er allebei in, dan krijgt de kaart twee knoppen naast elkaar.
 - `category` moet een `id` zijn uit `categories` bovenaan het bestand.

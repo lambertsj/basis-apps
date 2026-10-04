@@ -45,6 +45,7 @@
     {
       "id": "mijn-autokosten",
       "name": "Mijn Autokosten",
+      "maker": "Jorrit van Vrouwerff",
       "tagline": "Zie wat je auto je echt kost.",
       "description": "Houd de kosten van je auto bij, zoals tanken, onderhoud, verzekering en belasting, zodat je weet wat je per maand kwijt bent.",
       "category": "administratie",

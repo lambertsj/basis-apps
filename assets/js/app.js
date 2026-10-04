@@ -184,6 +184,9 @@
       .concat(Array.isArray(app.platforms) ? app.platforms : [])
       .join(" · ");
     body.appendChild(el("p", "mt-5 text-xs text-stone-500", meta));
+    if (typeof app.maker === "string" && app.maker) {
+      body.appendChild(el("p", "mt-1 text-xs text-stone-500", "Gemaakt door " + app.maker));
+    }
 
     var actions = el("div", "mt-4 flex flex-wrap items-center gap-x-1 gap-y-2");
     var url = safeUrl(app.url);
@@ -233,7 +236,7 @@
   function matches(app) {
     if (state.category !== "alle" && app.category !== state.category) return false;
     if (!state.query) return true;
-    var haystack = [app.name, app.tagline, app.description, categoryLabel(app.category)]
+    var haystack = [app.name, app.tagline, app.description, app.maker || "", categoryLabel(app.category)]
       .concat(Array.isArray(app.platforms) ? app.platforms : [])
       .join(" ")
       .toLowerCase();
