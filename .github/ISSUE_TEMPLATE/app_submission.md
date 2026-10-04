@@ -12,7 +12,8 @@ labels: aanmelding
 - **Categorie:** (bijv. administratie, wonen, gezondheid, vervoer)
 - **Platform(s):** (iOS / Android / web)
 - **Link naar de app (App Store, Play Store of website):**
-- **Link naar de broncode of privacybeleid:**
+- **Link naar het privacybeleid:**
+- **Link naar de broncode (optioneel):** Open source is welkom, maar niet verplicht.
 
 ## Het manifest
 
