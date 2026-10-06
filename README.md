@@ -44,6 +44,8 @@ Een app krijgt het keurmerk alleen als hij aan alle vijf voldoet:
 4. Gegevens blijven zoveel mogelijk op het toestel; wat wel verwerkt wordt, is duidelijk beschreven.
 5. Transparant: aanmeldingen en beoordelingen zijn openbaar.
 
+De app zelf hoeft niet open source te zijn. De code van BasisApps zelf staat wel openbaar op GitHub.
+
 ## Een app aanmelden
 
 1. Open een issue met het template **App aanmelden**.
@@ -58,6 +60,7 @@ Voeg een object toe aan `apps`:
 {
   "id": "mijn-app",
   "name": "Mijn App",
+  "maker": "Naam van de maker",
   "tagline": "Eén korte zin.",
   "description": "Een of twee zinnen over wat de app doet.",
   "category": "administratie",
@@ -71,9 +74,11 @@ Voeg een object toe aan `apps`:
 }
 ```
 
+- `maker` is optioneel en verschijnt als "Gemaakt door …" op de kaart.
 - `platforms` toont de platformen op de kaart en maakt ze doorzoekbaar.
 - `url` is de App Store-link (of een andere link) en `playStore` de Play Store-link. Staan ze er allebei in, dan krijgt de kaart twee knoppen naast elkaar.
 - `category` moet een `id` zijn uit `categories` bovenaan het bestand.
+- `source` is de link naar de broncode en is optioneel: open source is welkom, maar geen voorwaarde voor het keurmerk.
 - `url`, `playStore`, `source` en `website` mogen `null` of weggelaten zijn. Alleen `http(s)`-links worden getoond.
 - `icon` is optioneel: een bestand in `assets/icons/` (vierkant, minimaal 512 px, zonder afgeronde hoeken). Zonder icoon toont de site een tegel met de beginletter. Icoon niet van een externe site inladen, dat zou bezoekers volgen.
 - Alle tekst wordt als platte tekst weergegeven. HTML wordt niet uitgevoerd.
