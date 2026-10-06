@@ -68,6 +68,19 @@
       "url": "https://apps.apple.com/nl/app/mijn-autokosten/id6814113877",
       "website": "https://serff-webdevelopment.nl/projecten",
       "added": "2026-10-04"
+    },
+    {
+      "id": "opzegwekker",
+      "name": "Opzegwekker",
+      "tagline": "Een seintje voordat je moet betalen.",
+      "description": "Opzegwekker rekent uit wanneer je een proefabonnement of jaarabonnement uiterlijk moet opzeggen en stuurt op tijd een melding, met een knop om direct op te zeggen.",
+      "category": "administratie",
+      "platforms": ["iOS"],
+      "icon": "assets/icons/opzegwekker.jpg",
+      "url": "https://apps.apple.com/nl/app/opzegwekker/id6819366729",
+      "source": "https://github.com/lambertsj/Basis-abbo",
+      "website": "https://jerlam.dev/opzegwekker/",
+      "added": "2026-10-06"
     }
   ]
 }
