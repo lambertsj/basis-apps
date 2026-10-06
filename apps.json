@@ -2,7 +2,8 @@
   "categories": [
     { "id": "alle", "label": "Alles" },
     { "id": "administratie", "label": "Administratie" },
-    { "id": "wonen", "label": "Wonen" }
+    { "id": "wonen", "label": "Wonen" },
+    { "id": "weer-navigatie", "label": "Weer & navigatie" }
   ],
   "apps": [
     {
@@ -43,6 +44,16 @@
       "added": "2026-10-02"
     },
     {
+      "id": "droog-over",
+      "name": "Droog Over",
+      "tagline": "Kom je droog van A naar B?",
+      "description": "Droog Over laat zien of je droog van A naar B kan wandelen, fietsen of e-biken.",
+      "category": "weer-navigatie",
+      "platforms": ["iOS", "Android", "Web"],
+      "url": "https://apps.apple.com/app/id6768894916",
+      "playStore": "https://play.google.com/store/apps/details?id=nl.droogover.app",
+      "website": "https://droogover.nl",
+      "added": "2026-10-06"
       "id": "mijn-autokosten",
       "name": "Mijn Autokosten",
       "maker": "Jorrit van Vrouwerff",
