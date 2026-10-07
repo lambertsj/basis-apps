@@ -307,7 +307,9 @@
     })
     .then(function (data) {
       state.categories = Array.isArray(data.categories) ? data.categories : [];
-      state.apps = Array.isArray(data.apps) ? data.apps : [];
+      state.apps = Array.isArray(data.apps) ? data.apps.slice().sort(function (a, b) {
+        return a.name.localeCompare(b.name, "nl", { sensitivity: "base" });
+      }) : [];
       renderFilters();
       renderApps();
     })

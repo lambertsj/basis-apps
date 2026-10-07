@@ -19,24 +19,6 @@
       "effort": "weekend"
     },
     {
-      "id": "abonnementen",
-      "name": "Abonnementenoverzicht",
-      "pitch": "Zie wat je elke maand betaalt en krijg een seintje vóór een abonnement verlengt.",
-      "effort": "weekend"
-    },
-    {
-      "id": "garantie",
-      "name": "Garantiebewaarder",
-      "pitch": "Bewaar bon en einddatum van garantie, zodat je bij een defect niet hoeft te zoeken.",
-      "effort": "paar-weekenden"
-    },
-    {
-      "id": "huisonderhoud",
-      "name": "Huisonderhoud",
-      "pitch": "Wanneer moest de cv-ketel ook alweer nagekeken worden? Een logboek met herinneringen.",
-      "effort": "weekend"
-    },
-    {
       "id": "planten",
       "name": "Plantenverzorging",
       "pitch": "Houd bij welke plant wanneer water, voeding of een nieuwe pot nodig heeft.",
@@ -47,6 +29,24 @@
       "name": "Wie betaalt wat",
       "pitch": "Verreken uitgaven met huisgenoten of vrienden, zonder account en zonder advertenties.",
       "effort": "paar-weekenden"
+    },
+    {
+      "id": "medicijnen",
+      "name": "Medicijnherinnering",
+      "pitch": "Een herinnering voor je medicijnen en een overzicht van wat je wanneer hebt genomen, alleen op je eigen toestel.",
+      "effort": "weekend"
+    },
+    {
+      "id": "tankbeurten",
+      "name": "Tankboekje",
+      "pitch": "Noteer elke tankbeurt of laadsessie en zie hoeveel je auto echt verbruikt.",
+      "effort": "weekend"
+    },
+    {
+      "id": "klusnotities",
+      "name": "Verfkleuren en maten",
+      "pitch": "Bewaar de verfkleur, tegelmaat en behangsoort van elke kamer, zodat je er bij de bouwmarkt niet naar hoeft te gokken.",
+      "effort": "weekend"
     }
   ]
 }
