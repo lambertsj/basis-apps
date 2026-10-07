@@ -81,6 +81,18 @@
       "source": "https://github.com/lambertsj/Basis-abbo",
       "website": "https://jerlam.dev/opzegwekker/",
       "added": "2026-10-06"
+    },
+    {
+      "id": "garantiebewaarder",
+      "name": "Garantiebewaarder",
+      "tagline": "Bewaar je bonnen en zie wanneer de garantie afloopt.",
+      "description": "Bewaar bonnen en aankopen met foto's of pdf's, zie wanneer de garantie afloopt en krijg op tijd een herinnering. Tekstherkenning gebeurt op je toestel en je gegevens blijven van jou.",
+      "category": "administratie",
+      "platforms": ["iOS"],
+      "icon": "assets/icons/garantiebewaarder.jpg",
+      "url": "https://apps.apple.com/nl/app/garantiebewaarder/id6819593067",
+      "source": "https://github.com/lambertsj/Garantiebewaarder",
+      "added": "2026-10-07"
     }
   ]
 }
