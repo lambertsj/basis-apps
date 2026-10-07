@@ -3,7 +3,9 @@
     { "id": "alle", "label": "Alles" },
     { "id": "administratie", "label": "Administratie" },
     { "id": "wonen", "label": "Wonen" },
-    { "id": "weer-navigatie", "label": "Weer & navigatie" }
+    { "id": "weer-navigatie", "label": "Weer & navigatie" },
+    { "id": "kinderen", "label": "Kinderen" },
+    { "id": "auto", "label": "Auto" }
   ],
   "apps": [
     {
@@ -11,7 +13,7 @@
       "name": "Kilometerregistratie",
       "tagline": "Ritten bijhouden zonder abonnement.",
       "description": "Registreer je ritten voor de belasting of je werkgever. Je gegevens blijven op je eigen toestel.",
-      "category": "administratie",
+      "category": "auto",
       "platforms": ["iOS"],
       "icon": "assets/icons/kilometerregistratie.jpg",
       "url": "https://apps.apple.com/nl/app/kilometerregistratie-nl/id6791920895",
@@ -36,7 +38,7 @@
       "name": "RitLogger",
       "tagline": "Zakelijke en privékilometers bijhouden voor de Belastingdienst.",
       "description": "Registreer je ritten met de leaseauto en zie of je onder de 500 privékilometers blijft. Geen automatische GPS-tracking; ritten worden gesynchroniseerd zodat je meerdere toestellen kunt gebruiken.",
-      "category": "administratie",
+      "category": "auto",
       "platforms": ["Android"],
       "icon": "assets/icons/ritlogger.png",
       "playStore": "https://play.google.com/store/apps/details?id=com.mrijntjes.ritlogger",
@@ -62,7 +64,7 @@
       "maker": "Jorrit van Vrouwerff",
       "tagline": "Zie wat je auto je echt kost.",
       "description": "Houd de kosten van je auto bij, zoals tanken, onderhoud, verzekering en belasting, zodat je weet wat je per maand kwijt bent.",
-      "category": "administratie",
+      "category": "auto",
       "platforms": ["iOS"],
       "icon": "assets/icons/mijn-autokosten.jpg",
       "url": "https://apps.apple.com/nl/app/mijn-autokosten/id6814113877",
@@ -142,7 +144,7 @@
       "maker": "Erwin Lips (Dutch Apps)",
       "tagline": "Vind openbare gratis laadpalen voor je elektrische auto.",
       "description": "Een kaart met openbare, gratis laadpalen. Gebruikers kunnen zelf laadpalen aanpassen of toevoegen.",
-      "category": "weer-navigatie",
+      "category": "auto",
       "platforms": [
         "Android"
       ],
@@ -157,7 +159,7 @@
       "maker": "Erwin Lips (Dutch Apps)",
       "tagline": "Op zoek naar een speeltuin voor de kinderen?",
       "description": "Een kaart met binnenspeeltuinen (speelparadijzen, Baluba's, krijspaleizen) en grote buitenspeeltuinen. Gebruikers kunnen zelf speeltuinen aanpassen of toevoegen.",
-      "category": "weer-navigatie",
+      "category": "kinderen",
       "platforms": [
         "Android"
       ],
