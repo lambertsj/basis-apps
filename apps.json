@@ -93,6 +93,18 @@
       "url": "https://apps.apple.com/nl/app/garantiebewaarder/id6819593067",
       "source": "https://github.com/lambertsj/Garantiebewaarder",
       "added": "2026-10-07"
+    },
+    {
+      "id": "huisonderhoud",
+      "name": "Huisonderhoud",
+      "tagline": "Weet wat er aan je huis moet gebeuren, voordat het een probleem wordt.",
+      "description": "Vink aan wat bij je huis hoort en krijg een onderhoudsschema op maat. Afgevinkte klussen komen met datum, uitvoerder en foto in een logboek dat je als pdf-dossier kunt bewaren.",
+      "category": "wonen",
+      "platforms": ["iOS"],
+      "icon": "assets/icons/huisonderhoud.jpg",
+      "url": "https://apps.apple.com/nl/app/huisonderhoud/id6819667424",
+      "source": "https://github.com/lambertsj/Huisonderhoud",
+      "added": "2026-10-07"
     }
   ]
 }
