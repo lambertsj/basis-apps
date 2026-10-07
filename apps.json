@@ -105,6 +105,66 @@
       "url": "https://apps.apple.com/nl/app/huisonderhoud/id6819667424",
       "source": "https://github.com/lambertsj/Huisonderhoud",
       "added": "2026-10-07"
+    },
+    {
+      "id": "afval-nederland",
+      "name": "Afval Nederland",
+      "maker": "Erwin Lips (Dutch Apps)",
+      "tagline": "Weten wanneer welke afvalbak buiten moet.",
+      "description": "Digitale afvalkalender met meldingen voor grote delen van Nederland. Je postcode wordt alleen gebruikt om je de juiste meldingen te sturen.",
+      "category": "wonen",
+      "platforms": [
+        "Android"
+      ],
+      "icon": "assets/icons/afval-nederland.jpg",
+      "playStore": "https://play.google.com/store/apps/details?id=nl.afval",
+      "website": "https://dutchapp.nl",
+      "added": "2026-10-07"
+    },
+    {
+      "id": "afval-drimmelen",
+      "name": "Afval Drimmelen",
+      "maker": "Erwin Lips (Dutch Apps)",
+      "tagline": "De afvalkalender van gemeente Drimmelen.",
+      "description": "Digitale afvalkalender met meldingen voor Drimmelen, Helkant, Hooge Zwaluwe, Lage Zwaluwe, Made, Terheijden en Wagenberg. Een particulier initiatief, niet van de gemeente.",
+      "category": "wonen",
+      "platforms": [
+        "Android"
+      ],
+      "icon": "assets/icons/afval-drimmelen.jpg",
+      "playStore": "https://play.google.com/store/apps/details?id=nl.drimmelen.afval",
+      "website": "https://dutchapp.nl",
+      "added": "2026-10-07"
+    },
+    {
+      "id": "laadpalen-nederland",
+      "name": "Laadpalen Nederland",
+      "maker": "Erwin Lips (Dutch Apps)",
+      "tagline": "Vind openbare gratis laadpalen voor je elektrische auto.",
+      "description": "Een kaart met openbare, gratis laadpalen. Gebruikers kunnen zelf laadpalen aanpassen of toevoegen.",
+      "category": "weer-navigatie",
+      "platforms": [
+        "Android"
+      ],
+      "icon": "assets/icons/laadpalen-nederland.jpg",
+      "playStore": "https://play.google.com/store/apps/details?id=charging.free",
+      "website": "https://dutchapp.nl",
+      "added": "2026-10-07"
+    },
+    {
+      "id": "speeltuinen-nederland",
+      "name": "Speeltuinen Nederland",
+      "maker": "Erwin Lips (Dutch Apps)",
+      "tagline": "Op zoek naar een speeltuin voor de kinderen?",
+      "description": "Een kaart met binnenspeeltuinen (speelparadijzen, Baluba's, krijspaleizen) en grote buitenspeeltuinen. Gebruikers kunnen zelf speeltuinen aanpassen of toevoegen.",
+      "category": "weer-navigatie",
+      "platforms": [
+        "Android"
+      ],
+      "icon": "assets/icons/speeltuinen-nederland.jpg",
+      "playStore": "https://play.google.com/store/apps/details?id=nl.baluba",
+      "website": "https://dutchapp.nl",
+      "added": "2026-10-07"
     }
   ]
 }
